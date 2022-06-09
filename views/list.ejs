@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+	<div class="box" id="heading">
+		<h2> <%= kindOfTitle %></h2>
+	</div>
+
+	<div class="box">
+		<!-- loop conditions -->
+		<% for (let i = 0; i < newListText.length; i++) { %>
+		<div class="item">
+			<input type="checkbox" name="">
+			<p> <%= newListText[i] %> </p>
+		</div>
+		
+		<% } %>
+
+		<form class="item" action="/" method="post">
+			<input type="text" name="newText" placeholder="New Duties" autocomplete="off">
+			<button type="submit" name="Outline" value=<%= kindOfTitle %>>Add</button>
+		</form>
+	</div>
+
+<%- include('footer'); -%>
